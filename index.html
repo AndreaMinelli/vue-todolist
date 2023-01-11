@@ -57,7 +57,9 @@
           <!-- To Do list -->
           <ul class="list-group w-50 mx-auto">
             <li v-for="(task, i) in tasks" :class="listItemClass">
-              <div :class="{'text-decoration-line-through' : task.done}">
+              <div
+                @click="getDone(i)"
+                :class="{'text-decoration-line-through' : task.done}">
                 {{ task.text }}
               </div>
               <div>

@@ -66,6 +66,9 @@ const app = Vue.createApp({
       this.tasks.push({ ...this.newTask });
       this.newTask.text = "";
     },
+    getDone(i) {
+      this.tasks[i].done = !this.tasks[i].done;
+    },
   },
 });
 
