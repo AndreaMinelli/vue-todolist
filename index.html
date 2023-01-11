@@ -36,6 +36,21 @@
           </figure>
         </header>
         <main>
+          <!-- Input per aggiungere task -->
+          <div class="d-flex justify-content-center align-items-center mb-5">
+            <!-- Input area -->
+            <div class="w-50 me-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Nuova task" />
+            </div>
+            <div>
+              <!-- Button -->
+              <button type="button" class="btn btn-success">Aggiungi</button>
+            </div>
+          </div>
+          <!-- To Do list -->
           <ul class="list-group w-50 mx-auto">
             <li v-for="(task, i) in tasks" :class="listItemClass">
               <div :class="{'text-decoration-line-through' : task.done}">
