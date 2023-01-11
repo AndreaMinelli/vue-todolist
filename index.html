@@ -37,25 +37,32 @@
         </header>
         <main>
           <!-- Input per aggiungere task -->
-          <div class="d-flex justify-content-center align-items-center mb-5">
+          <div
+            class="d-flex justify-content-center align-items-center mb-5 w-75 mx-auto">
             <!-- Input area -->
-            <div class="w-50 me-3">
+            <div class="w-50">
               <input
                 type="text"
                 class="form-control"
                 placeholder="Nuova task"
-                v-model="newTask.text"
+                v-model.trim="newTask.text"
                 @keyup.enter="addTask" />
             </div>
             <div>
               <!-- Button -->
-              <button @click="addTask" type="button" class="btn btn-success">
+              <button
+                @click="addTask"
+                type="button"
+                class="btn btn-success mx-3">
                 Aggiungi
+              </button>
+              <button @click="deleteAll" type="button" class="btn btn-danger">
+                Rimuovi tutto
               </button>
             </div>
           </div>
           <!-- To Do list -->
-          <ul class="list-group w-50 mx-auto">
+          <ul v-if="tasks.length" class="list-group w-50 mx-auto">
             <li v-for="(task, i) in tasks" :class="listItemClass">
               <div
                 @click="getDone(i)"
@@ -67,6 +74,9 @@
               </div>
             </li>
           </ul>
+          <div v-else class="text-center">
+            <h3>Non c'è niente da fare in programma</h3>
+          </div>
         </main>
       </div>
     </div>
