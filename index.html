@@ -35,7 +35,9 @@
         </header>
         <main>
           <ul class="list-group w-75 mx-auto">
-            <li v-for="task in tasks" class="list-group-item">
+            <li
+              v-for="task in tasks"
+              :class="['list-group-item', {'text-decoration-line-through' : task.done}]">
               {{ task.text }}
             </li>
           </ul>

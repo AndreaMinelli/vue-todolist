@@ -22,7 +22,7 @@ const app = Vue.createApp({
       tasks: [
         {
           text: "Fare la spesa",
-          done: false,
+          done: true,
         },
         {
           text: "Andare in palestra",
@@ -34,7 +34,7 @@ const app = Vue.createApp({
         },
         {
           text: "Cucinare",
-          done: false,
+          done: true,
         },
         {
           text: "Andare al cinema",
