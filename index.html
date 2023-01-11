@@ -24,7 +24,7 @@
   </head>
   <body>
     <div id="root">
-      <div class="container">
+      <div class="container pb-3">
         <header class="text-center p-3">
           <figure class="w-50 mx-auto">
             <img
@@ -33,6 +33,13 @@
               alt="Logo Boolean" />
           </figure>
         </header>
+        <main>
+          <ul class="list-group w-75 mx-auto">
+            <li v-for="task in tasks" class="list-group-item">
+              {{ task.text }}
+            </li>
+          </ul>
+        </main>
       </div>
     </div>
   </body>
