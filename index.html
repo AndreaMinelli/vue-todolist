@@ -44,7 +44,8 @@
                 type="text"
                 class="form-control"
                 placeholder="Nuova task"
-                v-model="newTask.text" />
+                v-model="newTask.text"
+                @keyup.enter="addTask" />
             </div>
             <div>
               <!-- Button -->
