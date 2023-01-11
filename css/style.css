@@ -1,3 +1,7 @@
 ul div {
   cursor: pointer;
 }
+
+ul .fa-solid:hover {
+  color: red;
+}
