@@ -54,6 +54,11 @@ const app = Vue.createApp({
       ],
     };
   },
+  methods: {
+    removeTask(i) {
+      this.tasks.splice(i, 1);
+    },
+  },
 });
 
 app.mount("#root");

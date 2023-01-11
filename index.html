@@ -17,6 +17,8 @@
       rel="stylesheet"
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
     <!-- VUE JS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- JS Script -->
@@ -35,12 +37,12 @@
         </header>
         <main>
           <ul class="list-group w-50 mx-auto">
-            <li v-for="task in tasks" :class="listItemClass">
+            <li v-for="(task, i) in tasks" :class="listItemClass">
               <div :class="{'text-decoration-line-through' : task.done}">
                 {{ task.text }}
               </div>
               <div>
-                <i class="fa-solid fa-trash-can"></i>
+                <i class="fa-solid fa-trash-can" @click="removeTask(i)"></i>
               </div>
             </li>
           </ul>
