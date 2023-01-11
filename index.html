@@ -43,11 +43,14 @@
               <input
                 type="text"
                 class="form-control"
-                placeholder="Nuova task" />
+                placeholder="Nuova task"
+                v-model="newTask.text" />
             </div>
             <div>
               <!-- Button -->
-              <button type="button" class="btn btn-success">Aggiungi</button>
+              <button @click="addTask" type="button" class="btn btn-success">
+                Aggiungi
+              </button>
             </div>
           </div>
           <!-- To Do list -->

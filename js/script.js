@@ -52,11 +52,19 @@ const app = Vue.createApp({
         "align-items-center",
         "px-3",
       ],
+      newTask: {
+        text: "",
+        done: false,
+      },
     };
   },
   methods: {
     removeTask(i) {
       this.tasks.splice(i, 1);
+    },
+    addTask() {
+      this.tasks.push({ ...this.newTask });
+      this.newTask.text = "";
     },
   },
 });
