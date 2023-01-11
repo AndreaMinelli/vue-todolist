@@ -34,11 +34,14 @@
           </figure>
         </header>
         <main>
-          <ul class="list-group w-75 mx-auto">
-            <li
-              v-for="task in tasks"
-              :class="['list-group-item', {'text-decoration-line-through' : task.done}]">
-              {{ task.text }}
+          <ul class="list-group w-50 mx-auto">
+            <li v-for="task in tasks" :class="listItemClass">
+              <div :class="{'text-decoration-line-through' : task.done}">
+                {{ task.text }}
+              </div>
+              <div>
+                <i class="fa-solid fa-trash-can"></i>
+              </div>
             </li>
           </ul>
         </main>
